@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment Three</title>
-    <!-- Taillwind And DaisyUI  -->
+    <!-- Tailwind And DaisyUI  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -20,11 +20,14 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        "primary-colors": '#FF4240',
                     }
                 }
             }
         }
     </script>
+    <!-- Font-Awesome -->
+    <script src="https://kit.fontawesome.com/5dec753e7b.js" crossorigin="anonymous"></script>
     <style>
         .manrope-font {
             font-family: 'Manrope', sans-serif;
@@ -33,12 +36,110 @@
 
 </head>
 
-<body>
-    <header>
-
+<body class="manrope-font">
+    <header class="container mx-auto lg:px-24 p-8">
+        <!-- ___________________________ Navbar ____________________________-->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a class="text-primary-colors font-bold">Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-3xl font-extrabold">Hockey's</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a class="text-primary-colors font-bold">Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end ">
+                <i class="fa-solid fa-magnifying-glass mr-4 invisible lg:visible"></i>
+                <a class="btn bg-primary-colors text-white px-5">Get Ticket</a>
+            </div>
+        </div>
+        <!-- Banner -->
+        <div class="my-5 relative">
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="Images/1.png" alt="" class="w-full">
+                    <div class="absolute transform -translate-y-1/2 left-5 bottom-0">
+                        <a href="#slide2" class="btn btn-circle bg-black text-white">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-black text-white">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="Images/4.png" alt="" class="w-full">
+                    <div class="absolute transform -translate-y-1/2 left-5 bottom-0">
+                        <a href="#slide1" class="btn btn-circle bg-black text-white">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-black text-white">❯</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="text-white bg-black mx-auto lg:w-1/2 lg:absolute bottom-10 right-10 px-4 py-5  lg:px-8 lg:py-10 rounded-lg space-y-3">
+                <h1 class="text-xl lg:text-2xl font-extrabold">Meet all the heroes from the field</h1>
+                <p class="text-sm lg:text-base font-medium">
+                    If you have a team and if you want to buy any player for your team you can now apply for
+                    them.
+                </p>
+            </div>
+        </div>
     </header>
-    <main>
+    <main class="container mx-auto lg:px-24 p-8">
+        <!--____________________________ ProgressBar Section ___________________________-->
+        <div class="border-y-2  border-dashed">
+            <div class="text-center w-1/2 mx-auto space-y-3 py-10">
+                <h1 class="text-3xl font-extrabold">Professional Hockeys Club</h1>
+                <p class="text-base font-medium ">Hockey is the popular game and an interesting game that many countries
+                    play.There are different
+                    varieties of this game played across the globe.
+                </p>
+            </div>
+            <div class=" flex flex-col lg:flex-row gap-20 justify-evenly text-center pb-20">
+                <div>
+                    <div class="radial-progress text-red-600" style="--value:87;--size:9rem" role="progressbar"><span class="text-2xl text-black font-extrabold">87%</span>
+                    </div>
+                    <h2 class="text-xl font-bold mt-5">Prayer Facility</h2>
+                    <p>We provide nice environment for praying.</p>
+                </div>
+                <div>
+                    <div class="radial-progress text-green-400" style="--value:95;--size:9rem" role="progressbar"><span class="text-2xl text-black font-extrabold">95%</span>
+                    </div>
+                    <h2 class="text-xl font-bold mt-5">Experienced Coach</h2>
+                    <p>If your team need coach.We also provide it.</p>
+                </div>
+                <div>
+                    <div class="radial-progress text-yellow-300" style="--value:90;--size:9rem" role="progressbar"><span class="text-2xl text-black font-extrabold">90%</span>
+                    </div>
+                    <h2 class="text-xl font-bold mt-5">Senior Player</h2>
+                    <p>Here Also Have Many Of Senior Player</p>
+                </div>
+                <div>
+                    <div class="radial-progress text-blue-400" style="--value:80;--size:9rem" role="progressbar"><span class="text-2xl text-black font-extrabold">80%</span></div>
+                    <h2 class="text-xl font-bold mt-5">Training Ground
+                    </h2>
+                    <p>Training ground also most need and clean</p>
+                </div>
+            </div>
 
+        </div>
     </main>
     <footer>
 
